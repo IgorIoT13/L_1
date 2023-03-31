@@ -1,7 +1,10 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import lombok.*;
-import ua.lviv.iot.algo.part1.lab1.UniversityGarden.UniversityGarden;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +17,5 @@ public abstract class Garden {
     public abstract boolean hasOrchard();
     public abstract boolean hasVegetableGarden();
 
-    public abstract int get_int() ;
-
+    public abstract int getInt();
 }

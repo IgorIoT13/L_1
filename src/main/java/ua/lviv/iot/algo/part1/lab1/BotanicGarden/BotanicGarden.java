@@ -20,7 +20,7 @@ public class BotanicGarden extends Garden {
     }
 
     @Override
-    public int get_int() {
+    public int getInt() {
         return Count_greenhouses;
     }
 }

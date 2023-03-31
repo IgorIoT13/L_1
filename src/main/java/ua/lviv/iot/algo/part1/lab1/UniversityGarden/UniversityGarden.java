@@ -11,7 +11,7 @@ public class UniversityGarden extends Garden {
     int Count_sculptures;
 
     @Override
-    public int get_int() {
+    public int getInt() {
         return Count_sculptures;
     }
 

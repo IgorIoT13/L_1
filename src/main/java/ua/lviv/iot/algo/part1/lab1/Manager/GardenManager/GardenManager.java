@@ -19,22 +19,22 @@ import lombok.*;
 public class GardenManager extends addGardenManager {
     private List<Garden> gardens = new ArrayList<Garden>();
     @Override
-    public void addobject(Garden garden) {
+    public void addObject(Garden garden) {
         gardens.add(garden);
     }
 
     public List<Garden> find_sculpture(int sculpture){
-        return gardens.stream().filter(garden -> garden instanceof UniversityGarden && garden.get_int() < sculpture ).collect(Collectors.toList());
+        return gardens.stream().filter(garden -> garden instanceof UniversityGarden && garden.getInt() < sculpture ).collect(Collectors.toList());
     }
     public List<Garden> find_Greenhouses(int greenhouses){
-        return gardens.stream().filter(garden -> garden instanceof BotanicGarden && garden.get_int() > greenhouses ).collect(Collectors.toList());
+        return gardens.stream().filter(garden -> garden instanceof BotanicGarden && garden.getInt() > greenhouses ).collect(Collectors.toList());
     }
     public static void main(String[] args) {
         GardenManager manager = new GardenManager();
-        manager.addobject(new UniversityGarden(2));
-        manager.addobject(new UniversityGarden(1));
-        manager.addobject(new BotanicGarden(5));
-        manager.addobject(new BotanicGarden(1));
+        manager.addObject(new UniversityGarden(2));
+        manager.addObject(new UniversityGarden(1));
+        manager.addObject(new BotanicGarden(5));
+        manager.addObject(new BotanicGarden(1));
 
         List<Garden> gardensWithSculptures = manager.find_sculpture(3);
         System.out.println(gardensWithSculptures);
