@@ -12,8 +12,8 @@ import lombok.ToString;
 @Setter
 @ToString
 public abstract class Garden {
-    private double area;
-    private int numberOfFlowers;
+    protected int area;
+    protected int numberOfFlowers;
     public abstract boolean hasOrchard();
     public abstract boolean hasVegetableGarden();
 

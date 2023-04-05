@@ -1,5 +1,7 @@
 package ua.lviv.iot.algo.part1.lab1.Manager.GardenManager;
 
+import ua.lviv.iot.algo.part1.lab1.Clumba.Clumba;
+import ua.lviv.iot.algo.part1.lab1.Gorod.Gorod;
 import ua.lviv.iot.algo.part1.lab1.Manager.addGardenManager;
 import ua.lviv.iot.algo.part1.lab1.BotanicGarden.BotanicGarden;
 import ua.lviv.iot.algo.part1.lab1.Garden;
@@ -31,10 +33,13 @@ public class GardenManager extends addGardenManager {
     }
     public static void main(String[] args) {
         GardenManager manager = new GardenManager();
+
         manager.addObject(new UniversityGarden(2));
         manager.addObject(new UniversityGarden(1));
         manager.addObject(new BotanicGarden(5));
         manager.addObject(new BotanicGarden(1));
+        manager.addObject(new Clumba());
+        manager.addObject(new Gorod());
 
         List<Garden> gardensWithSculptures = manager.find_sculpture(3);
         System.out.println(gardensWithSculptures);

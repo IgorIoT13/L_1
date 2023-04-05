@@ -1,14 +1,8 @@
-package ua.lviv.iot.algo.part1.lab1.BotanicGarden;
+package ua.lviv.iot.algo.part1.lab1.Gorod;
 
 import ua.lviv.iot.algo.part1.lab1.Garden;
-import lombok.*;
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
-@ToString
-public class BotanicGarden extends Garden {
-    int countGreenhouses ;
+
+public class Gorod extends Garden {
     @Override
     public boolean hasOrchard() {
         return true;
@@ -21,6 +15,6 @@ public class BotanicGarden extends Garden {
 
     @Override
     public int getInt() {
-        return countGreenhouses;
+        return area;
     }
 }

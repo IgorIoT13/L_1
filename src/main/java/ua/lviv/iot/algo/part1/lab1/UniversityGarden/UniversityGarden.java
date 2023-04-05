@@ -8,11 +8,11 @@ import lombok.*;
 @Setter
 @ToString
 public class UniversityGarden extends Garden {
-    int Count_sculptures;
-
+    int countSculptures;
+    
     @Override
     public int getInt() {
-        return Count_sculptures;
+        return countSculptures;
     }
 
     @Override
