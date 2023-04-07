@@ -18,4 +18,8 @@ public abstract class Garden {
     public abstract boolean hasVegetableGarden();
 
     public abstract int getInt();
+
+    public String ToString(){
+        return "area -" + area + " numberOfFlowers" + numberOfFlowers ;
+    }
 }
