@@ -1,36 +1,57 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import ua.lviv.iot.algo.part1.lab1.Clumba;
-import ua.lviv.iot.algo.part1.lab1.Gorod;
-import ua.lviv.iot.algo.part1.lab1.BotanicGarden;
-import ua.lviv.iot.algo.part1.lab1.Garden;
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import lombok.*;
-import ua.lviv.iot.algo.part1.lab1.WorkUniversytiGarden;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 
-public class GardenManager{
+
+public class GardenManager {
+    /**
+     * List element garden.
+     */
     private List<Garden> gardens = new ArrayList<Garden>();
 
-    public void add(Garden garden) {
+    /**
+     * add new element to list.
+     * @param garden object class garden
+     */
+    public void add(final Garden garden) {
         gardens.add(garden);
     }
 
-    public List<Garden> findSculpture(int sculpture){
-        return gardens.stream().filter(garden -> garden instanceof WorkUniversytiGarden && garden.getInt() < sculpture ).collect(Collectors.toList());
+    /**
+     * find all object class WUG who have < sul.
+     * @param sculpture countscul
+     * @return list
+     */
+    public List<Garden> findSculpture(final int sculpture) {
+        return gardens.stream().filter(
+                garden -> garden
+                        instanceof WorkUniversytiGarden
+                        && garden.getInt() < sculpture)
+                .collect(Collectors.toList());
     }
-    public List<Garden> findGreenhouses(int greenhouses){
-        return gardens.stream().filter(garden -> garden instanceof BotanicGarden && garden.getInt() > greenhouses ).collect(Collectors.toList());
+
+    /**
+     * find all object class BG who have > gre.
+     * @param greenhouses countOfG-ses
+     * @return list
+     */
+    public List<Garden> findGreenhouses(final int greenhouses) {
+        return gardens.stream().filter(
+                garden -> garden
+                        instanceof BotanicGarden
+                        && garden.getInt() > greenhouses)
+                .collect(Collectors.toList());
     }
 }
 

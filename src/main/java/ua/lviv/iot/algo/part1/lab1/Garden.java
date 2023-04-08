@@ -4,22 +4,44 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
+
 public abstract class Garden {
-    protected int area;
-    protected int numberOfFlowers;
+    /**
+     *  Plocha.
+     */
+    private int area;
+    /**
+     * cvitochki.
+     */
+    private int numberOfFlowers;
+
+    /**
+     * Місце для овочів.
+     * @return можна їх там садити чи ні
+     */
     public abstract boolean hasOrchard();
+
+    /**
+     * Фруктові дерева.
+     * @return Є вони там чи ні
+     */
     public abstract boolean hasVegetableGarden();
 
+    /**
+     * Return int.
+     * @return int
+     */
     public abstract int getInt();
-
-    public String ToString(){
-        return "area -" + area + " numberOfFlowers" + numberOfFlowers ;
+    /**
+     * ТоString.
+     * @return String
+     */
+    public String myToString() {
+        return "area -" + area + " numberOfFlowers" + numberOfFlowers;
     }
 }

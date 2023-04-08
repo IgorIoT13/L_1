@@ -1,31 +1,48 @@
 package ua.lviv.iot.algo.part1.lab1;
 
-import ua.lviv.iot.algo.part1.lab1.Garden;
-
 public class Gorod extends Garden {
 
-
-    public Gorod(int area, int numberOfFlowers) {
+    /**
+     * Constractor.
+     * @param area plocha
+     * @param numberOfFlowers kvitki
+     */
+    public Gorod(final int area,
+                 final int numberOfFlowers) {
         super(area, numberOfFlowers);
     }
-
+    /**
+     * Місце для овочів.
+     * @return можна їх там садити чи ні
+     */
     @Override
     public boolean hasOrchard() {
         return true;
     }
 
-
+    /**
+     * Фруктові дерева.
+     * @return Є вони там чи ні
+     */
     @Override
     public boolean hasVegetableGarden() {
         return false;
     }
-
+    /**
+     * Повертає теплиці.
+     * @return повертає теплиці
+     */
     @Override
     public int getInt() {
-        return area;
+        return super.getArea();
     }
+
+    /**
+     * ТоString.
+     * @return String
+     */
     @Override
-    public String ToString(){
-        return super.ToString();
+    public String myToString() {
+        return super.myToString();
     }
 }

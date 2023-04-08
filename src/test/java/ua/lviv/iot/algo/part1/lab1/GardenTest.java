@@ -2,8 +2,6 @@ package ua.lviv.iot.algo.part1.lab1;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class GardenTest {
@@ -183,7 +181,7 @@ class GardenTest {
         garden.setNumberOfFlowers(5);
 
         String returner, tostr, meseg;
-        returner= garden.ToString();
+        returner= garden.myToString();
         tostr = "area -"+ 5 + " numberOfFlowers" + 5;
         meseg="ToString working uncorect";
         assertEquals(returner , tostr, meseg);

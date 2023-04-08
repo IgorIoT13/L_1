@@ -35,7 +35,7 @@ class BotanicGardenTest {
     void testToString() {
 
         String returner, tostr, meseg;
-        returner= garden.ToString();
+        returner= garden.myToString();
         tostr = "area -" + 2 + " numberOfFlowers" + 3 + " countGreenhouses " + 4;;
         meseg="ToString working uncorect";
         assertEquals (returner , tostr, meseg);
