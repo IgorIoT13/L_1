@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ua.lviv.iot.algo.part1.lab1.GardenManagerTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in ua.lviv.iot.algo.part1.lab1.GardenManagerTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in ua.lviv.iot.algo.part1.lab1.GardenManagerTest
