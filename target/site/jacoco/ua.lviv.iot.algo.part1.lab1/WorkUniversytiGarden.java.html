@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="uk"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WorkUniversytiGarden.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab</a> &gt; <a href="index.source.html" class="el_package">ua.lviv.iot.algo.part1.lab1</a> &gt; <span class="el_source">WorkUniversytiGarden.java</span></div><h1>WorkUniversytiGarden.java</h1><pre class="source lang-java linenums">package ua.lviv.iot.algo.part1.lab1;
+
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+<span class="fc" id="L9">@Setter</span>
+<span class="fc" id="L10">@ToString</span>
+public class WorkUniversytiGarden extends Garden {
+    /**
+     * Sculptures in garden.
+     */
+<span class="fc" id="L15">    private int countSculptures;</span>
+
+    /**
+     * Constructor.
+     * @param area plocha
+     * @param numberOfFlowers kvitochki
+     * @param constcountSculptures Sculptures
+     */
+    public WorkUniversytiGarden(
+            final int area,
+             final int numberOfFlowers,
+             final int constcountSculptures) {
+<span class="fc" id="L27">        super(area, numberOfFlowers);</span>
+<span class="fc" id="L28">        this.countSculptures = constcountSculptures;</span>
+<span class="fc" id="L29">    }</span>
+
+    /**
+     * return int.
+     * @return Sculptures
+     */
+    @Override
+    public final int getInt() {
+<span class="fc" id="L37">        return countSculptures;</span>
+    }
+    /**
+     * Місце для овочів.
+     * @return можна їх там садити чи ні
+     */
+    @Override
+    public final boolean hasOrchard() {
+<span class="fc" id="L45">        return false;</span>
+    }
+    /**
+     * Фруктові дерева.
+     * @return Є вони там чи ні
+     */
+    @Override
+    public final boolean hasVegetableGarden() {
+<span class="fc" id="L53">        return false;</span>
+    }
+    /**
+     * ТоString.
+     * @return String
+     */
+    @Override
+    public final String myToString() {
+<span class="fc" id="L61">        return super.myToString() + &quot; countSculptures &quot; + countSculptures;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
