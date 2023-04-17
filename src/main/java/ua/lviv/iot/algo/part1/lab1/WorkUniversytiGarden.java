@@ -20,11 +20,10 @@ public class WorkUniversytiGarden extends Garden {
      * @param numberOfFlowers kvitochki
      * @param constcountSculptures Sculptures
      */
-    public WorkUniversytiGarden(
-            final int area,
-             final int numberOfFlowers,
-             final int constcountSculptures) {
-        super(area, numberOfFlowers);
+    public WorkUniversytiGarden(final int area,
+                                final int numberOfFlowers,
+                                final int constcountSculptures) {
+        super("WorkUniversytiGarden",area, numberOfFlowers);
         this.countSculptures = constcountSculptures;
     }
 
@@ -56,6 +55,10 @@ public class WorkUniversytiGarden extends Garden {
      * ТоString.
      * @return String
      */
+    @Override
+    public String getHeaders (){return super.getHeaders() + "," + "Sculptures" + "\r\n";}
+    @Override
+    public String toCSV(){return super.toCSV() + "," + countSculptures + "\r\n";}
     @Override
     public final String myToString() {
         return super.myToString() + " countSculptures " + countSculptures;

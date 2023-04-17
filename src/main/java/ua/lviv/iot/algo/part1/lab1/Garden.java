@@ -11,6 +11,8 @@ import lombok.Setter;
 @Setter
 
 public abstract class Garden {
+    private String name ="Garden";
+
     /**
      *  Plocha.
      */
@@ -41,6 +43,14 @@ public abstract class Garden {
      * ТоString.
      * @return String
      */
+
+    public String getHeaders (){
+     return "name" + "," + "orchard" + "," + "vegetableGarden" + "," + "area" + "," + "numberOfFlowers";
+    }
+    public String toCSV(){
+        return name + "," + hasOrchard() + "," + hasVegetableGarden() + "," + area + "," + numberOfFlowers;
+    }
+
     public String myToString() {
         return "area -" + area + " numberOfFlowers" + numberOfFlowers;
     }

@@ -79,6 +79,7 @@
   </dependencies>
 
   <build>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -155,7 +156,6 @@
           </execution>
         </executions>
       </plugin>
-
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
@@ -170,7 +170,6 @@
           </execution>
         </executions>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
@@ -201,6 +200,31 @@
         </executions>
       </plugin>
 
+
     </plugins>
   </build>
+  <reporting>
+<plugins>
+
+  <plugin>
+    <groupId>com.github.spotbugs</groupId>
+    <artifactId>spotbugs-maven-plugin</artifactId>
+    <version>4.2.3</version>
+  </plugin>
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-pmd-plugin</artifactId>
+    <version>3.14.0</version>
+  </plugin>
+
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-checkstyle-plugin</artifactId>
+    <version>3.1.1</version>
+  </plugin>
+
+</plugins>
+
+
+  </reporting>
 </project>

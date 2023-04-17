@@ -9,7 +9,7 @@ public class Clumba extends Garden {
      */
     public Clumba(final int area,
                   final int numberOfFlowers) {
-        super(area, numberOfFlowers);
+        super("Clumba",area, numberOfFlowers);
     }
 
     /**
