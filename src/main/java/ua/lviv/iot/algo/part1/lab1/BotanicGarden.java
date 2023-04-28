@@ -7,6 +7,7 @@ import lombok.ToString;
 @Setter
 @ToString
 public class BotanicGarden extends Garden {
+
     /**
      * Кіл. теплиць
      */
@@ -20,7 +21,7 @@ public class BotanicGarden extends Garden {
     public BotanicGarden(final int area,
                          final int numberOfFlowers,
                          final int consCountGreenhouses) {
-        super(area, numberOfFlowers);
+        super("BotanicGarden", area, numberOfFlowers);
         this.countGreenhouses = consCountGreenhouses;
     }
 
@@ -50,6 +51,12 @@ public class BotanicGarden extends Garden {
     public int getInt() {
         return countGreenhouses;
     }
+
+    @Override
+    public String getHeaders (){return super.getHeaders() + "," + "greenhouses" + "\r\n";}
+
+    @Override
+    public String toCSV(){return super.toCSV() + "," + countGreenhouses+ "\r\n";}
 
     /**
      * ТоString.

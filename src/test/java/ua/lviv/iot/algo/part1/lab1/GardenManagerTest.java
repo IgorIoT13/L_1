@@ -1,5 +1,6 @@
 package ua.lviv.iot.algo.part1.lab1;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,51 +9,61 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GardenManagerTest {
+    private GardenManager manager = new GardenManager();
 
-    GardenManager manager = new GardenManager();
-    @Test
-    void add() {
-        manager.add(new WorkUniversytiGarden(2,4,5));
-        manager.add(new BotanicGarden(2,4,5));
+    private List<Garden> list = new ArrayList<Garden>();
+    @BeforeEach
+    public void setUp() {
+        manager.add(new WorkUniversytiGarden(3,4,1));
+        manager.add(new WorkUniversytiGarden(3,4,3));
+        manager.add(new WorkUniversytiGarden(3,4,9));
+        manager.add(new WorkUniversytiGarden(3,4,3));
+        manager.add(new WorkUniversytiGarden(3,4,5));
+        manager.add(new WorkUniversytiGarden(3,4,7));
+        manager.add(new BotanicGarden(3,4,1));
+        manager.add(new BotanicGarden(3,4,3));
+        manager.add(new BotanicGarden(3,4,9));
+        manager.add(new BotanicGarden(3,4,3));
+        manager.add(new BotanicGarden(3,4,5));
+        manager.add(new BotanicGarden(3,4,7));
 
-        List<Garden> list = new ArrayList<Garden>();
-        list.add(new WorkUniversytiGarden(2,4,5));
-        list.add(new BotanicGarden(2,4,5));
+        list.add(new WorkUniversytiGarden(3,4,1));
+        list.add(new WorkUniversytiGarden(3,4,3));
+        list.add(new WorkUniversytiGarden(3,4,9));
+        list.add(new WorkUniversytiGarden(3,4,3));
+        list.add(new WorkUniversytiGarden(3,4,5));
+        list.add(new WorkUniversytiGarden(3,4,7));
+        list.add(new BotanicGarden(3,4,1));
+        list.add(new BotanicGarden(3,4,3));
+        list.add(new BotanicGarden(3,4,9));
+        list.add(new BotanicGarden(3,4,3));
+        list.add(new BotanicGarden(3,4,5));
+        list.add(new BotanicGarden(3,4,7));
 
-        String strManager, strList;
-        strManager = manager.getGardens().toString();
-        strList = list.toString();
-
-        assertEquals(strManager, strList);
     }
 
     @Test
-    void findSculpture() {
-        List<Garden> gardens = new ArrayList<Garden>();
-        gardens.add(new WorkUniversytiGarden(2,4,5));
-        List<Garden> result = new ArrayList<>();
-        for (Garden garden : gardens) {
-            if (garden instanceof WorkUniversytiGarden && garden.getInt() < 5) {
-                result.add(garden);
-            }
-        }
-        List<Garden> findWork = manager.findSculpture(5);
-        assertEquals(findWork, result);
+    void testAdd() {
+        int current = manager.getGardens().size();
+
+        manager.add(new BotanicGarden(2,2,3));
+        assertEquals(current, manager.getGardens().size()-1);
+
+    }
+
+
+
+    @Test
+    void testFindSculpture() {
+        List<Garden> resultList =manager.findSculpture(5);
+        assertTrue( resultList.size()== 3);
 
     }
 
     @Test
-    void findGreenhouses() {
-        List<Garden> gardens = new ArrayList<Garden>();
-        gardens.add(new BotanicGarden(2,4,5));
-        List<Garden> result = new ArrayList<>();
-        for (Garden garden : gardens) {
-            if (garden instanceof WorkUniversytiGarden && garden.getInt() > 5) {
-                result.add(garden);
-            }
-        }
-        List<Garden> findWork = manager.findGreenhouses(5);
-        assertEquals(findWork, result);
+    void testFindGreenhouses() {
+        List<Garden> resultList =manager.findGreenhouses(5);
+        assertTrue( resultList.size()== 2);
     }
 
     @Test

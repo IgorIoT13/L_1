@@ -9,7 +9,7 @@ public class Gorod extends Garden {
      */
     public Gorod(final int area,
                  final int numberOfFlowers) {
-        super(area, numberOfFlowers);
+        super("Gorod",area, numberOfFlowers);
     }
     /**
      * Місце для овочів.
